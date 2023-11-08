@@ -78,17 +78,19 @@ int main(int, char**){
     Dog b("Druzhok");
 
     std::cout << "Start the game" << std::endl;
-    
-    a.getToy(ball);
-    b.getToy(ball);
-    b.getToy(bone);
-    b.getToy(a.dropToy());
 
-    b.dropToy();
-    b.dropToy();
+    a.getToy(ball);//Sharick already have this toy
+    b.getToy(ball);//Another dog is playing with this toy
+    b.getToy(bone);//Toy SomeToy was dropped  Druzhok get the toy Toy
+    b.getToy(a.dropToy());//Sharick drop the toy Ball  Druzhok get the toy Ball
 
-    ball.reset();
-    bone.reset();
+    b.dropToy();//Druzhok drop the toy Ball
+    b.dropToy();//Nothing to drop.
+
+    ball.reset();//Toy Ball was dropped
+    bone.reset();//Toy Ball was dropped
+
+    return 0;
    
 }
 
